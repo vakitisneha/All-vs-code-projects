@@ -1,0 +1,99 @@
+
+<div>
+  <h2>TravelPlanet  <button (click)="logout()">Logout</button></h2>
+ </div>
+
+<div>
+  <h1>My Reservations <button (click)="openAdd()">Add</button></h1>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Slno</th>
+      <th>Hotel</th>
+      <th>Arrival</th>
+      <th>Departure</th>
+      <th>Type</th>
+      <th>Guests</th>
+      <th>Price</th>
+      <th>Manage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let items of element">
+      <td>{{items.Slno}}</td>
+      <td>{{items.Hotel}}</td>
+      <td>{{items.Arrival}}</td>
+      <td>{{items.Departure}}</td>
+      <td>{{items.Type}}</td>
+      <td>{{items.Guests}}</td>
+      <td>{{items.Price}}</td>
+      <td>{{items.Manage}}</td>
+      <td><button class="btn-btn-success" (click)="openEdit(items)">Edit</button>|
+        <button class="btn-btn-success" (click)="openDelete(items)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- <div>
+ <h2>TravelPlanet  <button>Logout</button></h2>
+</div>
+        
+<button mat-rised-button  class="btn btn-success" (click)="openAdd()">Add</button>
+        
+ <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            
+  <ng-container matColumnDef="Slno">
+    <th mat-header-cell *matHeaderCellDef> Slno </th>
+    <td mat-cell *matCellDef="let element"> {{element.Slno}} </td>
+  </ng-container>
+          
+            
+            <ng-container matColumnDef="Hotel">
+              <th mat-header-cell *matHeaderCellDef> Hotel </th>
+              <td mat-cell *matCellDef="let element"> {{element.Hotel}} </td>
+            </ng-container>
+          
+            
+            <ng-container matColumnDef="Arrival">
+              <th mat-header-cell *matHeaderCellDef> Arrival </th>
+              <td mat-cell *matCellDef="let element"> {{element.Arrival}} </td>
+            </ng-container>
+          
+          
+            <ng-container matColumnDef="Departure">
+              <th mat-header-cell *matHeaderCellDef> Departure </th>
+              <td mat-cell *matCellDef="let element"> {{element.Departure}} </td>
+            </ng-container>
+          
+           
+            <ng-container matColumnDef="Type">
+              <th mat-header-cell *matHeaderCellDef> Type </th>
+              <td mat-cell *matCellDef="let element"> {{element.Type}} </td>
+            </ng-container>
+          
+
+            <ng-container matColumnDef="Guests">
+                <th mat-header-cell *matHeaderCellDef> Guests </th>
+                <td mat-cell *matCellDef="let element"> {{element.Guests}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="Price">
+                <th mat-header-cell *matHeaderCellDef> Price </th>
+                <td mat-cell *matCellDef="let element"> {{element.Price}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="Manage">
+                <th mat-header-cell *matHeaderCellDef> Manage </th>
+                <td mat-cell *matCellDef="let element"> <button>edit</button>|<button>reset</button> </td>
+              </ng-container>
+
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+ -->

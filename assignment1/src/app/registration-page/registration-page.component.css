@@ -1,0 +1,22 @@
+rest{
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+legend{
+     text-align: center;
+}
+label{
+    margin-left: 200px;
+}
+input{
+    margin-left: 30px;
+    
+}
+h1{
+    margin-left: 450px;
+}
+button{
+    margin-left: 450px;
+}

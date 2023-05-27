@@ -1,0 +1,20 @@
+<button type="button" (click)="onClick()">{{nameonButton}}</button>
+
+<table *ngIf="isClicked">
+    <tr>
+        <th>rollno</th>
+        <th>name</th>
+        <th>branch</th>
+        <th>marks</th>
+    </tr>
+    <tr *ngFor="let users of studentlist">
+        <td>{{users.rollno}}</td>
+        <td>{{users.name}}</td>
+        <td>{{users.branch}}</td>
+        <td>{{users.marks}}</td>
+    </tr>
+</table>
+    <ng-template #errorref>
+        <span>{{messageBeforeClicked}}</span>
+    </ng-template>
+

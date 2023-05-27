@@ -1,0 +1,19 @@
+<!-- <input type="text" [(ngModel)]="nameEnteredByStudent"> -->
+<input type="text" [(ngModel)]="nameEnteredByStudent">
+<button type="button" (click)="datafilteredFromServiceForStudentData()">search for student</button>
+
+<table>
+    <tr>
+        <th>rollno</th>
+        <th>name</th>
+        <th>branch</th>
+        <th>marks</th>
+    </tr>
+    <tr *ngFor="let data of finalResult">
+        <td>{{data.rollno}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.branch}}</td>
+        <td>{{data.marks}}</td>
+    </tr>
+   
+</table>

@@ -1,0 +1,17 @@
+<h1 class="heading"><strong>Angular service</strong></h1>
+<button class="button" (click)="getproducts()">getproduct</button>
+<div> 
+<table>
+  <tr>
+      <th>productid</th>
+      <th>name</th>
+      <th>price</th>
+  </tr>
+  <tr *ngFor="let product of products">
+    <td>{{product.productid}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+  </tr>
+
+</table>
+</div>

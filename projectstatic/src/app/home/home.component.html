@@ -1,0 +1,16 @@
+<!-- <p>home works!</p> -->
+<!-- <p>login works!</p> -->
+
+<div>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+        </tr>
+        <tr (click)="onClick(item)" *ngFor="let item of data">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+        </tr>
+    </table>
+
+</div>

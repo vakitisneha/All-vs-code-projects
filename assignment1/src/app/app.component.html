@@ -1,0 +1,21 @@
+
+<!-- <p>loginpage works!</p> -->
+<fieldset>
+    
+    <h1>{{page}}</h1>
+    <div>
+    <label for="text">username:</label>
+    <input type="username" placeholder="enter username">
+    <br><br>
+    <label for="text">password:</label>
+    <input type="username" placeholder="enter your password">
+</div>
+<br><br><br>
+
+<button class="button" (click)="login($event)">login</button>
+<button ><a routerLink="registrationpage">signup</a></button>
+<button><a routerLink="forgotpassword">forgotpassword</a></button>|
+
+</fieldset>
+
+<router-outlet></router-outlet>

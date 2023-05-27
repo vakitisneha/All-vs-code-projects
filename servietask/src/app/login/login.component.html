@@ -1,0 +1,17 @@
+<!-- <p>login works!</p> -->
+<fieldset>
+<h1>Login Details</h1>
+
+<div>
+<label for="username">username</label>
+<input type="username" placeholder="enter your name" [(ngModel)]="username">
+<span>{{username}}</span>
+<br><br>
+<label for="password">password</label>
+<input type="password" placeholder="enter your password" [(ngModel)]="password">
+<span>{{password}}</span>
+</div>
+<br><div>
+<button (click)="onclick()">submit</button>
+</div>
+</fieldset>

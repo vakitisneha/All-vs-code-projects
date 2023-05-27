@@ -1,0 +1,114 @@
+<button type="button" class="cancelClass" aria-label="Close" (click)="onClose()">
+  <span aria-hidden="true">x</span>
+</button>
+<form [formGroup]="reserveForm" (ngSubmit)="onFormSubmit()">
+<div>
+<label>Slno</label>
+<input type="number" placeholder="No" formControlName="Slno"><br><br>
+<label>Hotel</label>
+<select formControlName="Hotel" >
+  <!-- <option value="Hotel"placeholder="Hotel" ></option> -->
+  <option value="marriot">Marriot</option>
+  <option value="Aria">Arial</option>
+  <option value="Vivanta">Vivanta</option>
+  <option value="Novotel">Novotel</option>
+</select><br><br>
+<!-- <input type="text" placeholder="Hotel" formControlName="Hotel"><br><br> -->
+<label >Arrival</label>
+<input type="date" formControlName="Arrival"><br><br>
+<label>Departure</label> 
+<input type="date" formControlName="Departure"><br><br>
+<label>Type:</label>
+<select formControlName="Type">
+  <option value="Type" ></option>
+  <option value="luxury Suit">Luxury Suit</option>
+  <option value="Suit">Suit</option>
+  <option value="Economy">Economy</option>
+  <option value="Double">Double</option>
+</select><br><br>
+<label>Guests</label>
+<input type="number" placeholder="Guests" formControlName="Guests"><br><br>
+<label>Price</label>
+<input type="number" placeholder="price" formControlName="Price"><br><br>
+</div>
+<div >
+<button (click)="addList()" class="btn btn-active">Submit</button>|
+
+<button type="reset" (click)="clear()">Clear</button>
+</div>
+</form>
+ 
+
+
+<!-- <div >
+   <button class="close" (click)="closeedit()">X</button>
+
+ <form [formGroup]="registrationform" >
+   
+    <div class="form-group">
+<br><br>
+  <label for="Slno">Slno: </label>
+  <input type="number" placeholder="Slno" class="form-control">
+
+</div>
+<br><br>
+<div class="form-group">
+
+
+  <label for="Hotel">Hotel: </label>
+  <input type="text" placeholder="Hotel" class="form-control">
+</div>
+  <br><br>
+  <div class="form-group">
+
+  <label for="Arrival">Arrival: </label>
+  <input type="Date" class="form-control">
+
+  </div>
+  
+  <br><br>
+  <div class="form-group" >
+
+  <label for="Departure">Departure: </label>
+  <input type="Date" placeholder="dt/mm/yyyy" class="form-control">
+  </div>
+  <br><br>
+  <div class="form-group">
+
+  <label for="Type">Type:</label>
+
+<select name="car" id="cars">
+  <option >Luxuary Suite</option>
+  <option >Suite</option>
+  <option >Double</option>
+  <option >Economy</option>
+</select>
+</div>
+<br><br>
+<div class="form-group">
+
+  <label for="Guests">Guests: </label>
+  <input type="number" placeholder="Guests" class="form-control">
+</div>
+  <br><br>
+<div class="form-group">
+  <label for="price">Price: </label>
+  <input type="number" placeholder="Price" class="form-control">
+  </div>
+
+  <button (click)="save()">save</button>|
+
+  <button class="reset"  (click)="resetEdit()">Reset</button>
+
+</form>
+</div>
+
+
+
+<!-- <mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepicker]="picker">
+  <mat-hint>MM/DD/YYYY</mat-hint>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+<button mat-raised-button (click)="picker.open()">Open</button> -->

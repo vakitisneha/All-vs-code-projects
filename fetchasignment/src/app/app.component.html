@@ -1,0 +1,42 @@
+<label for="search">search</label>
+<input type="text" placeholder="search with id" [(ngModel)]="target">
+<button (click)="search()">search</button>
+
+<div>
+  <table>
+    <tr>
+      <th>userid</th>
+      <th>id</th>
+      <th>title</th>
+      <th>body</th>
+      <th>action</th>
+   </tr>
+   <tr *ngFor="let item of searchData">
+    <td>{{item.userid}}</td>
+    <td>{{item.id}}</td>
+    <td>{{item.title}}</td>
+    <td>{{item.body}}</td>
+    <td>{{item.action}}</td>
+   </tr>
+  </table>
+  <br>
+
+  <table>
+    <tr>
+      <th>userid</th>
+      <th>id</th>
+      <th>title</th>
+      <th>body</th>
+      <th>action</th>
+   </tr>
+   <tr *ngFor="let item of data">
+    <td>{{item.userid}}</td>
+    <td>{{item.id}}</td>
+    <td>{{item.title}}</td>
+    <td>{{item.body}}</td>
+    <td>{{item.action}}</td>
+    <td><button (click)="deleteData(item)">Delete</button></td>
+   </tr>
+  </table>
+ 
+</div>
